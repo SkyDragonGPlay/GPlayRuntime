@@ -1,0 +1,83 @@
+-injars 'temp/libxxx-no-obfuscated.jar'
+-outjars 'temp/libxxx-obfuscated.jar'
+-printmapping 'temp/mapping.txt'
+
+-libraryjars '../common/lib/android.jar'
+-libraryjars '../common/lib/annotations.jar'
+
+-dontshrink
+-dontoptimize
+-optimizations !code/simplification/arithmetic,!field/*,!class/merging/*
+-optimizationpasses 5
+-allowaccessmodification
+-dontusemixedcaseclassnames
+-repackageclasses com.chukong.cocosruntime.sdk
+-keepattributes InnerClasses,Signature,*Annotation*
+-dontpreverify
+-verbose
+-dontwarn
+
+-keep public class com.google.vending.licensing.ILicensingService
+-keep public class com.android.vending.licensing.ILicensingService
+
+-keepclassmembers public class * extends android.view.View {
+    void set*(***);
+    *** get*();
+}
+
+-keep public class * extends android.app.Activity
+-keep public class * extends android.app.Service
+-keep public class * extends android.content.BroadcastReceiver
+
+-keepclassmembers enum  * {
+    public static **[] values();
+    public static ** valueOf(java.lang.String);
+}
+
+-keepclasseswithmembers,allowshrinking class * {
+    native <methods>;
+}
+
+-keepclassmembers class **.R$* {
+    public static <fields>;
+}
+
+-keep class android.content.**{ *;}
+-keep class android.os.**{ *;}
+
+-keep public class com.tencent.smtt.gameengine.**{ *;}
+-keep public class com.tencent.qb.plugin.gameengine.**{ 
+    public <fields>;
+    public <methods>;
+}
+
+-keep public interface com.chukong.cocosruntime.ICocosRuntimeBridge { *;}
+
+-keep public interface com.chukong.cocosruntime.ICocosRuntimeProxy { *;}
+
+-keep public interface com.chukong.cocosruntime.ICocosRuntimeSDK { *;}
+
+-keep public interface com.chukong.cocosruntime.IOnStartGameListener { *;}
+
+-keep public interface com.chukong.cocosruntime.gameengine.IGameEngine { *;}
+
+-keep public class com.chukong.cocosruntime.gameengine.GameEngine {
+    public <fields>;
+    public <methods>;
+}
+
+-keep public class com.chukong.cocosruntime.CocosRuntimeSDK{
+    public <methods>;
+}
+
+-keep public abstract interface com.chukong.cocosruntime.CocosRuntime$* {
+    public <fields>;
+    public <methods>;
+}
+
+# AnySDK framework
+-keep class com.anysdk.framework.** {*;}
+-keep public abstract interface com.chukong.cocosruntime.thirdparty.** {
+    public <fields>;
+    public <methods>;
+}

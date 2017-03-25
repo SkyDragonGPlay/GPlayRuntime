@@ -1,0 +1,6 @@
+{
+    "ignore_files": [
+        "com/cocos/play/callback/OnRequestGameInfoListListener",
+        "#com/cocos/play/plugin/ICocos.*"
+    ]
+}

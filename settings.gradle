@@ -1,0 +1,12 @@
+include ':GplayAsyncHttp'
+project(':GplayAsyncHttp').projectDir = new File('../GplaySDK/library/GplayAsyncHttp')
+
+include ':frameworks:GplayRuntimeBridge'
+project(':frameworks:GplayRuntimeBridge').projectDir = new File('../GplaySDK/frameworks/GplayRuntimeBridge')
+
+include ':frameworks:GplayUnitSDKPlugin'
+project(':frameworks:GplayUnitSDKPlugin').projectDir = new File('../GplaySDK/frameworks/GplayUnitSDKPlugin')
+
+include ':engines:GplayEngineBridge'
+include ':frameworks:GplayRuntimeSDK'
+include ':frameworks:GplayRuntimeParams'

@@ -1,0 +1,8 @@
+{
+    "ignore_files": [
+        "com/skydragon/gplay/callback/OnRequestGameInfoListListener",
+        "com/skydragon/gplay/service/IDownloadProxy",
+        "#com/skydragon/gplay/service/IRuntime.*",
+        "#com/skydragon/gplay/thirdsdk/IChannelSDK.*"
+    ]
+}
